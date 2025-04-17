@@ -1,6 +1,7 @@
 package com.example.appi;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,16 +34,21 @@ public class MainActivity extends AppCompatActivity {
                 toggleTextViewVisibility();
             }
         });
+        Button myButton = findViewById(R.id.button4);
+        myButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
     }
     private void toggleTextViewVisibility() {
         TextView myTextView = findViewById(R.id.textView);
         Button hideButton = findViewById(R.id.button);
-        // Check the current visibility state
         if (myTextView.getVisibility() == View.VISIBLE) {
-            // If visible, hide it
             myTextView.setVisibility(View.GONE);
         } else {
-            // If hidden, show it
             myTextView.setVisibility(View.VISIBLE);
         }
     }
