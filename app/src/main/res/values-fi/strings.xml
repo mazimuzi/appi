@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">appi</string>
+    <string name="title_activity_bottom_nav">Navigointi</string>
+    <string name="title_home">Koti</string>
+    <string name="title_dashboard">Kojelauta</string>
+    <string name="title_notifications">Ilmoitukset</string>
 </resources>
